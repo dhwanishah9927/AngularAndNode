@@ -1,0 +1,44 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 8px solid rgb(46, 46, 46);
+    font-size: 25px;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+    
+}
+
+.head {
+    margin-bottom: 50px;
+}
+
+agm-map {
+    height: 300px;
+  }
+
+  #map {
+    height: 531px;
+    width: 50%;
+   }
+.container{
+    margin-top:30px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  

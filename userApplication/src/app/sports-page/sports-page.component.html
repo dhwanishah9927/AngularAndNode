@@ -1,0 +1,50 @@
+<app-homepage-header></app-homepage-header>
+<!-- body goes here.  -->
+
+<!-- start of search button. -->
+<div class="dropdown-divider"></div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <div class="input-group">
+                <input class="form-control border-secondary py-2" type="search" value="search" [(ngModel)]="filter">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="filterNews()">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of search button. -->
+<div class="dropdown-divider"></div>
+
+
+<!-- sports info Cards -->
+<div class='container mt-1 '>
+    <div class='row mb-6 justify-content-center'>
+        <div class='col-8'>
+            <div class='row mt-5'>
+                <div appColor class="col-sm-8 col-md-8 col-lg-6" *ngFor='let sportNews of allSportsArticleReports'>
+                    <div class="card">
+                        <img class="card-img-top" [src]="sportNews.image" alt="image"/>
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-between">
+                                <div class="">{{ sportNews.title }}</div>
+                            </div>
+                            <div class="mt-1 row d-flex flex-row justify-content-between">
+                                <div class="small text-muted">
+                                   {{ sportNews.description }}
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

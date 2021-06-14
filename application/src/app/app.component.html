@@ -1,0 +1,10 @@
+<!-- <app-admin-login-page></app-admin-login-page> -->
+
+<!-- <app-register-page></app-register-page> -->
+
+<!--<app-add-news></app-add-news>-->
+
+<app-login-header *ngIf='isAuth'></app-login-header>
+<app-header *ngIf='!isAuth'></app-header>
+
+<router-outlet></router-outlet> 

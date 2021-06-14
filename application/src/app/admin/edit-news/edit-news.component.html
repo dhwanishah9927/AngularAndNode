@@ -1,0 +1,58 @@
+<br>
+<div class='container justify-content-center'>
+    <div class='card-header text-white' style="background-color: black;">
+        <h3 class='card-title' style="text-align: center;">Edit News</h3>
+    </div>
+
+    <div class='login-body'>
+    </div>
+    <!--[mustMatch]="['userPass', 'confirmPassword' ]-->
+    <form #editNewsForm='ngForm' (ngSubmit)="createNews()">
+
+        <div class='form-group'>
+            <h3>Title: {{title}}</h3>
+
+        </div>
+
+        <div class='form-group'>
+            <label for='description'>Description</label>
+
+            <input class='form-control' type='text' id='description' name='description' #newDescription='ngModel'
+                [ngClass]="{ 'is-invalid': newDescription.touched && newDescription.invalid}" required
+                [(ngModel)]='description' />
+            <!-- error handling for username-->
+        </div>
+
+        <div class='form-group'>
+            <label for='image'>Image</label>
+
+            <input class='form-control' type='text' id='image' name='image' #newImage='ngModel'
+                [ngClass]="{ 'is-invalid': newImage.touched && newImage.invalid}" required [(ngModel)]='image' />
+            <!-- error handling for username-->
+        </div>
+
+        <div class='form-group'>
+            <label for='publishDate'>Date</label>
+
+            <input class='form-control' type='date' id='publishDate' name='publishDate' #newDate='ngModel'
+                [ngClass]="{ 'is-invalid': newDate.touched && newDate.invalid}" required [(ngModel)]='publishDate' />
+            <!-- error handling for username-->
+        </div>
+
+        <div class='form-group'>
+            <label for='category'>Category</label>
+
+            <input class='form-control' type='text' id='category' name='category' #newCategory='ngModel'
+                [ngClass]="{ 'is-invalid': newCategory.touched && newCategory.invalid}" required
+                [(ngModel)]='category' />
+            <!-- error handling for username-->
+        </div>
+
+        <!-- submit button -->
+        <div class='card-footer' style="text-align: center;">
+            <button class='btn btn-primary' [disabled]='editNewsForm.invalid' style="background-color: black;">Update
+                News</button>
+        </div>
+    </form>
+
+</div>
